@@ -1,0 +1,46 @@
+.slides {
+  margin: 0 auto;
+  text-align: center;
+  width: 707px;
+  height: 406px;
+
+  &__title {
+    color: #9da3d7;
+    font-family: $semiBold;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+}
+
+.carousel {
+  width: 707px;
+  height: 303px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.17);
+
+  &-indicators {
+    bottom: -65px;
+
+    li {
+      width: 32px;
+      height: 32px;
+      border-radius: 100%;
+      border: 2px solid #DDDDDD;
+    }
+
+    .active {
+      background: url("../bg/Эллипс 2@1X.png") no-repeat center center;
+    }
+  }
+
+  &-inner {
+    width: 692px;
+    height: 287px;
+    padding: 8px;
+  }
+}
+
+

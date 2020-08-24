@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webpack project</title>
+    <link rel="icon" href="favicon.ico" type="image/ico">
+</head>
+<body>
+<header class="header">
+  <div class="headerInner">
+    <div class="logo">
+      <img class="logo__img" alt="company" src="./bg/home.png">
+    </div>
+    <div class="phones">
+      <a class="phones__link" href="#">+7(499) 777-77-77</a>
+      <a class="phones__link" href="#">+7(499) 777-77-77</a>
+    </div>
+  </div>
+</header>
+
+<div class="userPhone">
+  <div class="userPhone__inner">
+    <div class="userPhone__content">
+      <div class="userPhone__title">
+        <span>Форма с кнопкой</span>
+      </div>
+      <div class="phoneForm">
+        <div class="phoneForm__title">
+          <p class="phoneForm__text">оставь телефон и получи что-то офигенное</p>
+        </div>
+        <label>
+          <input class="phoneForm__input" type="number" name="phone" placeholder="Введите номер">
+        </label>
+        <button class="phoneForm__btn">Получить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slides">
+  <p class="slides__title">Тут у нас слайдер</p>
+  <div class="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="bg/1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="bg/2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="bg/3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="textBox">
+  <p class="textBox__title">просто текстовый блок</p>
+  <div class="textBox__content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac dui
+      lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet,
+      commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat
+      accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu
+      ut,
+      sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat.
+      Curabitur
+      aliquet nec dui eget aliquet. Nulla in risus ante.
+    </p>
+  </div>
+</section>
+
+<div class="calculator">
+  <div class="calculator__title">
+    <p>Калькулятор<br>(стоимость пользователь узнает по телефону)</p>
+  </div>
+  <div class="itemsBlock">
+    <div class="item">
+      <div>
+        <img class="item__picture" alt="window" src="bg/window/1.png">
+      </div>
+      <div>
+        <a href="#" id="link1" class="item__link item__link_active">Одностворчатое</a>
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img class="item__picture" alt="window" src="bg/window/2.png">
+      </div>
+      <div>
+        <a class="item__link" id="link2" href="#">Двухстворчатое</a>
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img class="item__picture" alt="window" src="bg/window/3.png">
+      </div>
+      <div>
+        <a class="item__link" id="link3" href="#">Трехстворчатое</a>
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img class="item__picture" alt="window" src="bg/window/4.png">
+      </div>
+      <div>
+        <a class="item__link" id="link4" href="#">Балконный блок</a>
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img class="item__picture" alt="window" src="bg/window/5.png">
+      </div>
+      <div>
+        <a class="item__link" id="link5" href="#">Остекление балкона</a>
+      </div>
+    </div>
+  </div>
+  <div class="calculatorSection">
+    <div class="calculatorSection__params">
+      <div class="itemParams">
+        <p class="itemParams__title">ширина</p>
+        <p class="itemParams__title">высота</p>
+        <div>
+          <img class="itemParams__picture" alt="window" src="bg/big_window/1_копия.png">
+        </div>
+        <div class="sizes">
+          <label>ширина, см
+            <input type="number" class="sizes__form-control">
+          </label>
+          <div class="sizes__symbol">
+            <p>x</p>
+          </div>
+          <label>высота, см
+            <input type="number" class="sizes__form-control">
+          </label>
+        </div>
+      </div>
+      <div class="criterion">
+        <p class="criterion__title">Одностворчатое окно KBE</p>
+        <p class="criterion__subtitle">1. Критерий выбора </p>
+        <div>
+          <label>
+            <input type="radio" name="1" value="1"> пункт выбора 1
+          </label>
+          <label>
+            <input type="radio" name="1" value="2"> пункт выбора 2
+          </label>
+          <label>
+            <input type="radio" name="1" value="3"> пункт выбора 3
+          </label>
+        </div>
+        <p class="criterion__subtitle">2. Выберите открывание створки </p>
+        <select class="criterion__select form-control">
+          <option>Не открывается</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+    <div class="calculation">
+      <div class="calculation__inputBlock col-auto">
+        <div class="phoneNumber input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <img alt="user icon" src="bg/user.png">
+            </div>
+          </div>
+          <input type="number" class="phoneNumber__input form-control"
+                 placeholder="Введите номер">
+        </div>
+      </div>
+      <button type="button" class="calculation__btn btn">рассчитать</button>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer__inner">
+    <span>просто</span><br>
+    <span>скромный футер</span>
+  </div>
+</footer>
+</body>
+</html>
