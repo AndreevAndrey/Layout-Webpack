@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Webpack project</title>
-    <link rel="icon" href="favicon.ico" type="image/ico">
+  <link rel="icon" href="favicon.ico" type="image/ico">
 </head>
 <body>
 <header class="header">
@@ -88,7 +88,7 @@
         <img class="item__picture" alt="window" src="bg/window/1.png">
       </div>
       <div>
-        <a href="#" id="link1" class="item__link item__link_active">Одностворчатое</a>
+        <a href="#itemsBlock" id="link1" class="item__link item__link_active">Одностворчатое</a>
       </div>
     </div>
     <div class="item">
@@ -96,7 +96,7 @@
         <img class="item__picture" alt="window" src="bg/window/2.png">
       </div>
       <div>
-        <a class="item__link" id="link2" href="#">Двухстворчатое</a>
+        <a class="item__link" id="link2" href="#itemsBlock">Двухстворчатое</a>
       </div>
     </div>
     <div class="item">
@@ -104,7 +104,7 @@
         <img class="item__picture" alt="window" src="bg/window/3.png">
       </div>
       <div>
-        <a class="item__link" id="link3" href="#">Трехстворчатое</a>
+        <a class="item__link" id="link3" href="#itemsBlock">Трехстворчатое</a>
       </div>
     </div>
     <div class="item">
@@ -112,7 +112,7 @@
         <img class="item__picture" alt="window" src="bg/window/4.png">
       </div>
       <div>
-        <a class="item__link" id="link4" href="#">Балконный блок</a>
+        <a class="item__link" id="link4" href="#itemsBlock">Балконный блок</a>
       </div>
     </div>
     <div class="item">
@@ -120,17 +120,20 @@
         <img class="item__picture" alt="window" src="bg/window/5.png">
       </div>
       <div>
-        <a class="item__link" id="link5" href="#">Остекление балкона</a>
+        <a class="item__link" id="link5" href="#itemsBlock">Остекление балкона</a>
       </div>
     </div>
   </div>
+
   <div class="calculatorSection">
     <div class="calculatorSection__params">
-      <div class="itemParams">
-        <p class="itemParams__title">ширина</p>
-        <p class="itemParams__title">высота</p>
-        <div>
-          <img class="itemParams__picture" alt="window" src="bg/big_window/1_копия.png">
+      <div class="itemWrapper">
+        <div class="itemParams">
+          <p class="itemParams__title">ширина</p>
+          <p class="itemParams__title">высота</p>
+          <div>
+            <img class="itemParams__picture" alt="window" src="bg/big_window/1_копия.png">
+          </div>
         </div>
         <div class="sizes">
           <label>ширина, см
