@@ -1,12 +1,8 @@
-@import "~normalize-css";
+@import "font";
 
 *, ::after, ::before {
   box-sizing: content-box;
 }
-
-@import "font";
-@import "courusel";
-
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -237,8 +233,15 @@ button, button:active, button:focus {
   }
 }
 
-.itemParams {
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 408px;
+  height: 390px;
+}
+
+.itemParams {
   text-align: center;
 
   &__title {
@@ -259,7 +262,6 @@ button, button:active, button:focus {
 
 .sizes {
   width: 408px;
-  margin-top: 39px;
   display: flex;
   justify-content: center;
 
