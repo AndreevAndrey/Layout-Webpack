@@ -1,12 +1,8 @@
-@import "~normalize-css";
+@import "font";
 
 *, ::after, ::before {
   box-sizing: content-box;
 }
-
-@import "font";
-@import "courusel";
-
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
