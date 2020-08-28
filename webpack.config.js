@@ -6,6 +6,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const optimization = () => {
   const config = {
@@ -21,7 +22,7 @@ const optimization = () => {
   return config;
 };
 
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+const filename = (ext) => !isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 const cssLoaders = (extra) => {
   const loaders = [
@@ -32,7 +33,14 @@ const cssLoaders = (extra) => {
         reloadAll: true
       },
     },
-    'css-loader'];
+    'css-loader',
+    {
+      loader: 'postcss-loader',
+      options: {
+        plugins: [autoprefixer()]
+      }
+    },
+  ];
 
   if (extra) {
     loaders.push(extra);
@@ -82,19 +90,19 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, 'src/bg'),
-            to: path.resolve(__dirname, 'dist/bg')
-          },
-          {
-            from: path.resolve(__dirname, 'src/favicon.ico'),
-            to: path.resolve(__dirname, 'dist')
-          },
-        ],
-      }),
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/bg'),
+          to: path.resolve(__dirname, 'dist/bg')
+        },
+        {
+          from: path.resolve(__dirname, 'src/favicon.ico'),
+          to: path.resolve(__dirname, 'dist')
+        },
+      ],
+    }),
 
-      new CleanWebpackPlugin()
+    new CleanWebpackPlugin()
   ],
 
   module: {
@@ -117,12 +125,6 @@ module.exports = {
           }
         ]
       },
-
-      // {
-      //   test: /\.(html)$/,
-      //   use: ['html-loader']
-      // },
-
       {
         test: /\.css$/,
         use: cssLoaders()
